@@ -15,7 +15,6 @@ async function getRandomUser() {
   const res = await fetch("https://randomuser.me/api");
   const data = await res.json();
 
-  console.log(data.results);
   const user = data.results[0];
 
   const newUser = {
@@ -41,7 +40,17 @@ function updateDOM(providedData = data) {
   providedData.forEach((item) => {
     const element = document.createElement("div");
     element.classList.add("person");
-    element.innerHTML = `<strong>${item.name}</strong> ${item.money}`;
+    element.innerHTML = `<strong>${item.name}</strong> ${formatMoney(
+      item.money
+    )}`;
     main.appendChild(element);
   });
 }
+
+// Format number as money
+function formatMoney(number) {
+  return "$" + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+}
+
+// Event listeners
+addUserBtn.addEventListener("click", getRandomUser);
