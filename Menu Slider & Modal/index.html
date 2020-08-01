@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+      integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user" />
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <button class="toggle" id="toggle">
+        <i class="fa fa-bars fa-2x"></i>
+      </button>
+
+      <h1>Landing Page</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quod.
+      </p>
+
+      <button class="cta-btn" id="open">Sign Up</button>
+    </header>
+
+    <div class="container">
+      <h2>What is this Landing Page About</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fugiat
+        inventore ullam totam adipisci natus architecto iure, ab eaque. Harum
+        quisquam consequuntur quidem quo, itaque deserunt sed architecto commodi
+        suscipit!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+        maxime eos non eius veniam molestiae dolorem officiis rerum quidem
+        reiciendis!
+      </p>
+
+      <h2>Tell me more</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas non
+        minima quas magni ab reprehenderit harum, rem aliquam animi qui tempore.
+        Debitis molestias quae, similique, ex deserunt sequi exercitationem
+        corporis recusandae numquam rerum suscipit cupiditate eos quo itaque
+        magni aut.
+      </p>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Lifetime Access</li>
+        <li>2o Day Money Back</li>
+        <li>Customer Support</li>
+      </ul>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quis
+        ipsa ab culpa numquam sapiente quisquam quo nisi dignissimos! Pariatur
+        eveniet impedit alias accusamus enim ab cumque sunt nostrum quia quod
+        eum dignissimos illum vero modi quisquam, veniam porro voluptatibus!
+        Accusantium deserunt explicabo commodi, a atque eum neque nulla eos
+        nostrum reiciendis pariatur praesentium temporibus illum sunt inventore
+        omnis quidem quae excepturi quaerat, saepe, mollitia necessitatibus sit
+        at corporis? Adipisci?
+      </p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="madal-header">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="modal-content">
+          <p>Register with us to get offers, support and more</p>
+          <form class="modaal-form">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" placeholder="Enter Name" id="name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" placeholder="Enter Email" id="email" />
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="Enter password"
+                id="password"
+              />
+            </div>
+            <div>
+              <label for="password2">Confirm password</label>
+              <input
+                type="password"
+                placeholder="Enter password"
+                id="password2"
+              />
+            </div>
+            <input type="submit" value="Submit" class="submit-btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
