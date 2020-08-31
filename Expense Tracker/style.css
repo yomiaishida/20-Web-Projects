@@ -45,7 +45,7 @@ h4 {
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 20px 0;
 }
 
@@ -54,7 +54,7 @@ h4 {
   text-align: center;
 }
 
-.inc-exp-container > div::first-of-type {
+.inc-exp-container > div:first-of-type {
   border-right: 1px solid #dedede;
 }
 
