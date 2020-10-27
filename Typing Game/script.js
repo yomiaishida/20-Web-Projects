@@ -6,7 +6,7 @@ const endgameEl = document.getElementById("end-game-container");
 const settingsBtn = document.getElementById("settings-btn");
 const settings = document.getElementById("settings");
 const settingsForm = document.getElementById("settings-form");
-const difficultySelect = document.getElementById(difficulty);
+const difficultySelect = document.getElementById("difficulty");
 
 // List of words
 const words = [
@@ -40,6 +40,17 @@ let score = 0;
 
 // Init tiime
 let time = 10;
+
+let difficulty =
+  localStorage.getItem("difficulty") !== null
+    ? localStorage.getItem("difficulty")
+    : "medium";
+
+// Set difficulty select value
+difficultySelect.value =
+  localStorage.getItem("difficulty") !== null
+    ? localStorage.getItem("difficulty")
+    : "medium";
 
 // Start counting down
 const timeInterval = setInterval(updateTime, 1000);
@@ -91,6 +102,7 @@ addWordToDom();
 
 // Event listener
 
+// Typing
 text.addEventListener("input", (e) => {
   const insertedText = e.target.value;
 
@@ -101,8 +113,25 @@ text.addEventListener("input", (e) => {
     // Clear
     e.target.value = "";
 
-    time += 5;
+    if (difficulty === "hard") {
+      time += 2;
+    } else if (difficulty === "medium") {
+      time += 3;
+    } else {
+      time += 5;
+    }
 
     updateTime();
   }
+});
+
+// Settings btn click
+settingsBtn.addEventListener("click", () => {
+  settings.classList.toggle("hide");
+});
+
+// Settings select
+settingsForm.addEventListener("change", (e) => {
+  difficulty = e.target.value;
+  localStorage.setItem("difficulty", difficulty);
 });
