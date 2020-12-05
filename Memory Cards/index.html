@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-      integrity="sha256-+M4/V/SbAFiW1MPBCXnfnP9QSN3+Kea+N1B+DEV/YKQ="
-    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+      integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ=="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Memory Cards</title>
   </head>
@@ -24,12 +24,12 @@
     </h1>
 
     <div id="cards-container" class="cards">
-      <div class="card active">
+      <div class="card active show-answer">
         <div class="inner-card">
           <div class="inner-card-front">
             <p>What is PHP</p>
           </div>
-          <div class="inner-card-badk">
+          <div class="inner-card-back">
             <p>A programming language</p>
           </div>
         </div>
@@ -40,21 +40,21 @@
           <div class="inner-card-front">
             <p>What is PHP</p>
           </div>
-          <div class="inner-card-badk">
+          <div class="inner-card-back">
             <p>A programming language</p>
           </div>
         </div>
       </div>
     </div>
     <div class="navigation">
-      <button id="prev" class="nab-button">
+      <button id="prev" class="nav-button">
         <i class="fas fa-arrow-left"></i>
       </button>
 
       <p id="current"></p>
 
       <button id="next" class="nab-button">
-        <i class="fas fa-right-left"></i>
+        <i class="fas fa-arrow-right"></i>
       </button>
     </div>
 
